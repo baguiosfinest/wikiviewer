@@ -8,7 +8,6 @@ $(document).ready(function(){
       $(".inputsearch").focus();
     }else{
 
-
       // Using jQuery
       $.ajax( {
           url: "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" + qr,
@@ -17,8 +16,6 @@ $(document).ready(function(){
           crossDomain: true,
           headers: { 'Api-User-Agent': 'FCCWikiviewer/1.0' },
           success: function(data) {
-            console.log(data);
-
             for( var s in data.query.search){
               var html = "";
               html += "<div class='post'>";
