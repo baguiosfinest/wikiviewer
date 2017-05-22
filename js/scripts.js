@@ -12,7 +12,7 @@ $(document).ready(function(){
       // Using jQuery
       $.ajax( {
           url: "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" + qr,
-          dataType: 'json',
+          dataType: 'jsonp',
           type: 'POST',
           crossDomain: true,
           headers: { 'Api-User-Agent': 'FCCWikiviewer/1.0' },
