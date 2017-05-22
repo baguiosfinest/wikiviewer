@@ -14,6 +14,7 @@ $(document).ready(function(){
           url: "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" + qr,
           dataType: 'json',
           type: 'POST',
+          crossDomain: true,
           headers: { 'Api-User-Agent': 'FCCWikiviewer/1.0' },
           success: function(data) {
             console.log(data);
