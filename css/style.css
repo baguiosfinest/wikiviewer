@@ -1,0 +1,238 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/** Colors:
+#BD2F50, #F9F6E1, #ECE5C7, #544C4A, #4D8C99
+font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif;
+ **/
+ .hidden {
+ 	position: absolute;
+ 	overflow: hidden;
+ 	width: 0;
+ 	height: 0;
+ 	pointer-events: none;
+ }
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/** Header **/
+#header{
+  background: #544C4A;
+  padding: 20px 0;
+}
+
+.brand{
+  color: #4D8C99;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px #F9F6E1;
+}
+.brand:hover{
+  color: #BD2F50;
+  text-decoration: none;
+
+}
+
+/** Content **/
+#content{
+  padding: 20px 0;
+}
+
+#searchResults > div.post{
+  -webkit-transition: all 500ms ease-out 1s;
+  -moz-transition: all 500ms ease-out 1s;
+  -o-transition: all 500ms ease-out 1s;
+  transition: all 500ms ease-out 1s;
+  padding: 20px;
+  background: #ECE5C7;
+  margin: 0 0 20px 0;
+}
+
+#searchResults > div.post h3{
+  color: #4D8C99;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: #544C4A 1px solid;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.search{
+  margin: 0 auto 50px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 550px;
+  padding-right: 150px;
+  position: relative;
+}
+
+#btn-search{
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 110px;
+  cursor: pointer;
+  color: #4D8C99;
+}
+#btn-search:hover{
+  color: #BD2F50;
+}
+
+.btnrandom{
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  cursor: pointer;
+  background: #4D8C99;
+  border-color: #4D8C99;
+}
+.btnrandom:hover{
+  background: #BD2F50;
+  border-color: #BD2F50;
+}
+
+/** Input **/
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 600px;
+  width: 100%;
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: 400;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #696969;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 3em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 200%;
+}
+
+.input--nao {
+	overflow: hidden;
+	padding-top: 1em;
+}
+
+.input__field--nao {
+	padding: 0.5em 0em 0.25em;
+	width: 100%;
+	background: transparent;
+	color: #9da8b2;
+	font-size: 2em;
+}
+
+.input__label--nao {
+	position: absolute;
+	top: -10px;
+	font-size: 1.3em;
+	left: 0;
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 0em;
+	pointer-events: none;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: -webkit-transform 0.2s 0.15s, color 1s;
+	transition: transform 0.2s 0.15s, color 1s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.graphic--nao {
+	stroke: #92989e;
+	pointer-events: none;
+	-webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+	transition: transform 0.7s, stroke 0.7s;
+	-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+	transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input__field--nao:focus + .input__label--nao,
+.input--filled .input__label--nao {
+	color: #333;
+	-webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+	transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+}
+
+.input__field--nao:focus ~ .graphic--nao,
+.input--filled .graphic--nao {
+	stroke: #333;
+	-webkit-transform: translate3d(-66.6%, 0, 0);
+	transform: translate3d(-66.6%, 0, 0);
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
